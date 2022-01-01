@@ -49,7 +49,6 @@ exports.getProducts = async (req, res) => {
 exports.getProduct = async (req, res) => {
     try {
         const id = req.params.id;
-        console.log(id)
         const products = await Products.findById(id);
         res.json(products);
     }
